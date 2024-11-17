@@ -187,3 +187,26 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
         }
 
     }*/
+    //Longest Sub-Array with Sum K
+    class Basics{
+        public static void main(String[] args) {
+            System.out.println("Longest Subarray Length is:" + longSubArray());
+        }
+        static int longSubArray(){
+            int[] nums = {10, 5, 2, 7, 1, 9};
+            int sum = 0;
+            int target = 15;
+            int maxLen = Integer.MIN_VALUE;
+            int start = 0;
+            for(int end = 0;end<nums.length;end++){
+                sum = sum + nums[end];
+                while(sum>=target){
+                    maxLen = Math.max(maxLen,end-start+1);
+                    sum = sum - nums[start];
+                    start++;
+                }
+            }
+            return maxLen;
+
+        }
+    }
