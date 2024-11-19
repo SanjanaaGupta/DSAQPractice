@@ -1,4 +1,4 @@
-/*import startava.util.Scanner;
+/*import endava.util.Scanner;
 class Basics{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -6,7 +6,7 @@ class Basics{
         System.out.println("Hello" +" "+ name);
     }
 }*/
-/*import startava.util.Scanner;
+/*import endava.util.Scanner;
 class Basics{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -20,7 +20,7 @@ class Basics{
     }
 }*/
 //Prime Number
-/*import startava.util.Scanner;
+/*import endava.util.Scanner;
 class Basics{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -42,7 +42,7 @@ class Basics{
 
 }*/
 //Functions Basic Program
-/*import startava.util.Scanner;
+/*import endava.util.Scanner;
 class Basics{
     public static void main(String[] args) {
        int result = sum();
@@ -59,7 +59,7 @@ class Basics{
 }*/
 
 // Function String
-/*import startava.util.Scanner;
+/*import endava.util.Scanner;
 class Basics{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -76,18 +76,18 @@ class Basics{
 // Function and String
 /*class Basics{
     public static void main(String args[]){
-        String name = "startohn";
+        String name = "endohn";
         //greet(name);
         System.out.println(greet(name));
     }
     static void greet(String naam){
-        naam = "Sanstartana"; 
+        naam = "Sanendana"; 
         
     }
 }*/
  // Function and array
 
-/*import startava.util.Arrays;
+/*import endava.util.Arrays;
 
 /*class Basics{
     public static void main(String args[]){
@@ -120,11 +120,11 @@ class Basics{
  }*/
 
  // Var Args
- /*import startava.util.Arrays;
+ /*import endava.util.Arrays;
  class Basics{
     public static void main(String args[]){
         fun();
-        method1(4,2,"Sanstartana", "Gupta");
+        method1(4,2,"Sanendana", "Gupta");
 
 
     }
@@ -144,7 +144,7 @@ class Basics{
  /*class Basics{
     public static void main(String args[]){
         fun(10);
-        fun("Sanstartaa");
+        fun("Sanendaa");
 
     }
     static void fun(int a){
@@ -173,14 +173,14 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
         int[] arr = {2,3,1,2,4,3};
         int target = 7;
         int minLen = Integer.MAX_VALUE;
-        int start =0;
+        int end =0;
         int sum =0;
-            for(int start=0;start<arr.length;start++){
-                sum = sum + arr[start];
+            for(int end=0;end<arr.length;end++){
+                sum = sum + arr[end];
                 while(sum>=target){
-                    minLen = Math.min(minLen,start-start+1);
-                    sum = sum - arr[start];
-                    start++;
+                    minLen = Math.min(minLen,end-end+1);
+                    sum = sum - arr[end];
+                    end++;
                 }
             }
             return minLen;
@@ -196,12 +196,13 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
             int[] nums = {10, 5, 2, 7, 1, 9};
             int sum = 0;
             int target = 15;
-            int maxLen = Integer.MIN_VALUE;
-            int start = 0;
-            for(int start = 0;start<nums.length;start++){
-                sum = sum + nums[start];
+            int maxLen = 0;
+            int start=0;
+
+            for(int end = 0;end<nums.length;end++){
+                sum = sum + nums[end];
                 while(sum>=target){
-                    maxLen = Math.max(maxLen,start-start+1);
+                    maxLen = Math.max(maxLen,end-start+1);
                     sum = sum - nums[start];
                     start++;
                 }
@@ -220,9 +221,9 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
         int[] nums = {1,1,1};
         int sum =0;
         int count =0;
-        for(int start=0;start<nums.length;start++){
+        for(int end=0;end<nums.length;end++){
             sum = 0;
-            for(int end = start;end<nums.length;end++){
+            for(int end = end;end<nums.length;end++){
                 sum = sum +nums[end];
                 if(sum==k){
                     count++;
@@ -434,7 +435,7 @@ class Basics{
     }
 }*/
 //Linear Search using Range
-class Basics{
+/*class Basics{
     public static void main(String[] args) {
         search();
     }
@@ -442,9 +443,9 @@ class Basics{
         int[] arr = {5, 3, 2, 6};
         int target = 6;
         int index = -1;
-        int start = 1;
+        int end = 1;
         int end = 3;
-        for(int i=start;i<=end;i++){
+        for(int i=end;i<=end;i++){
             if(arr[i]==target){
                 index=i;
                 break;
@@ -458,4 +459,59 @@ class Basics{
         }
     }
 
+}*/
+//Two Sum
+/*import java .util.Arrays;
+class Basics{
+    public static void main(String args[]){
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+        int[] arr = new int[2];
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]+nums[j]==target){
+                    arr[i] = i;
+                    arr[i] = j;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+       
+    }
+}*/
+//217. Contains Duplicate
+/*class Basics{
+    public static void main(String[] args) {
+        System.out.println(containsDuplicate());
+    }
+    static boolean containsDuplicate(){
+        int[] nums = {1, 2, 3, 0};
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+            if(nums[i]==nums[j]){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+}*/
+
+//53. Maximum Subarray
+class Basics{
+    public static void main(String[] args) {
+        System.out.println(largestSubArray());
+    }
+    static int largestSubArray(){
+        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+       
+        int sum = 0;
+        int maxSum=Integer.MIN_VALUE;
+        for(int i=0;i<nums.length;i++){
+            sum = Math.max(nums[i],nums[i]+sum);
+            maxSum = Math.max(maxSum,sum);
+            
+        }
+        return maxSum;
+    }
 }
